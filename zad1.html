@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Amix</title>
+    </head>
+    <body>
+        <script>
+
+            const f1 = (birthYear, favNumber) => {
+                const paragraphElement = document.createElement('p');
+                paragraphElement.textContent = `Ulubioną liczbą osoby urodzonej w ${birthYear} roku jest ${favNumber}`;
+                document.body.appendChild(paragraphElement);
+            };
+
+            const f2 = () => {
+                const birthYear = parseInt(prompt('Enter your birth year'));
+                const favNumber = parseInt(prompt('Enter your favourite number'));
+
+                if (isNaN(birthYear) || isNaN(favNumber)) { alert("AMELKA ERROR!"); return; }
+
+                if ((birthYear < 1920 || birthYear > 2023) || ([69, 420, 2137].includes(favNumber))) f2();
+                else f1(birthYear, favNumber);
+            };
+
+            const interval = setInterval(f2, 60000);
+
+            document.addEventListener('DOMContentLoaded', f2);
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') clearInterval(interval);
+                alert('Interval is off!');
+            });
+
+        </script>
+    </body>
+</html>
