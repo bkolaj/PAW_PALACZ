@@ -1,0 +1,23 @@
+extends layout
+block content
+  div(class='wrapper')
+    form(method='post', action='/contact')
+      h1= title
+      div
+        label(for='name') Imię:
+        input(type='text', name='name')
+      div
+        label(for='email') Adres e-mail:
+        input(type='email', name='email')
+      div
+        label(for='topic') Temat:
+        select(name='topic')
+          option(value='zglos_blad') Zgłoś błąd
+          option(value='inne') Inne
+      div
+        label(for='message') Wiadomość:
+        textarea(name='message')
+      div
+        input(type='submit', value='Wyślij')
+
+        script(src="../javascripts/form.js", defer)
