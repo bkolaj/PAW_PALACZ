@@ -1,0 +1,11 @@
+{
+  "name": "6-10-23",
+  "version": "0.0.1",
+  "description": "zadanie",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "bartoszek",
+  "license": "ISC"
+}
